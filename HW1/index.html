@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wei Li(David), Liu">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Registration Form">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Notification container -->
+    <div class="notification-box"></div>
+    
+    <!-- Register Part -->
+    <section class="wrapper">
+        <div class="form register">
+            <header>Register</header>
+            <form action="parameters.html" id="form">
+                
+                <input type="text" placeholder="Account name" name="Account name" id="account" required 
+                oninvalid="setCustomValidity('Please enter your account number.')" />
+                <input type="text" placeholder="Display name" required name="Display name" id="display" oninvalid="setCustomValidity('Please enter your display number.')";/>
+                <input type="text" placeholder="Email address" required name="Email" id="email" oninvalid="setCustomValidity('Please enter your email address.')";/>
+                <input type="text" placeholder="Phone (123-456-7890)" required  maxlength="12" name="Phone" id="phone" oninvalid="setCustomValidity('Please enter your phone number.')";/>
+                <input type="date" placeholder="Date of birth" required id="date" name="Birth Date" oninvalid="setCustomValidity('Please enter your birthday.')";/>
+                <input type="text" placeholder="Zip Code" 
+                required name="Zip Code" id="zip" maxlength="5" onkeyup="value=value.replace(/[^\d]/g,'')" oninvalid="setCustomValidity('Please enter Zip Code number.')";/>
+                
+                <input type="password" name="Password" placeholder="Password" required id="password" oninvalid="setCustomValidity('Please enter your password.')";/>
+                <input type="password" placeholder="Confirm password" required id="confirm" oninvalid="setCustomValidity('Please confirm your password.')";/>
+                <input type="hidden" id="timestamp" name="Timestamp" value="">
+                <div>
+                    <input type="submit" value="Register" id="registerButton"/>
+                    <input type="reset" value="Clear" id="clearButton"/>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Login Part -->
+        <div class="form login">
+            <header>Login</header>
+            <form action="welcome.html">
+                <input type="text" placeholder="Email address" required id="loginEmail"/>
+                <input type="password" placeholder="Password" required id="loginPassword"/>
+            <a href="#">Forgot password?</a>
+            <input type="submit" value="Login" id = "login"/>
+            </form>
+        </div>
+    <section>
+    
+    <script src="./js/index.js"></script>
+</body>
+</html>
